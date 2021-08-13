@@ -1,0 +1,95 @@
+.top-right{
+    position: fixed;
+    height: 50px;
+    width: calc(100% - 260px);
+    z-index: 1;
+    right: 0;
+    background-color: rgb(141, 134, 233);
+}
+.timkiem input{
+    height: 30px;
+    width: 600px;
+    line-height: 50px;
+    position: fixed;
+    right: 350px;
+    margin: 10px;
+    border: 1px solid cornflowerblue;
+    border-radius: 5px;
+    color: rebeccapurple;
+    font-weight: 600; 
+    font-size: 15px;
+}
+
+input::placeholder{color: darkblue; font-weight: 400; font-family: sans-serif;}
+.timkiem .fa{
+    position: fixed;
+    right: 370px;
+    top: 15px;
+    font-weight: 600;
+    font-size: 20px;
+    color: darkblue;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.right-logout{
+    display: flex;
+    position: fixed;
+    right: 20px;
+    line-height: 50px;
+}
+.right-logout p{
+    margin: 0 15px 0 0;
+    color: rgb(125, 255, 212);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.right-logout p:hover{
+    color: #fff;
+}
+.right-logout a:hover{
+    color: #fff;
+}
+.right-logout a{
+    text-decoration: underline;
+    font-size: 13px;
+    color: #e91515;
+}
+@media screen and (max-width: 1023px) {
+  .top-right {
+    position: fixed;
+    width: 100%;
+  }
+  .timkiem input{
+      position: fixed;
+      width: 300px;
+      
+  }
+}
+
+@media screen and (max-width: 799px) {
+    .top-right {
+    position: fixed;
+    width: 100%;
+  }
+  .timkiem input{
+      position: fixed;
+      width: 300px;
+  }
+  .timkiem .fa{
+      position: fixed;
+      right: 110px;
+  }
+}
+
+@media screen and (max-width: 511px) {
+    .top-right {
+    position: fixed;
+  }
+  
+  .right-logout{
+      display: none;
+  }
+  
+}

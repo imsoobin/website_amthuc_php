@@ -1,0 +1,551 @@
+*{
+    margin: 0; padding: 0; text-decoration: none;
+    list-style: none; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(245, 224, 224);
+}
+.container{
+    width: 100%;
+    position: relative;
+    z-index: 100;
+    height: auto;
+    background-color: rgb(245, 224, 224);
+   
+}
+.container .menu{
+    height: 50px;
+    display: flex;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+.menu-top-left{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    float: left;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.menu-top-left ul{margin: 0 0 0 100px;}
+.menu-top-left ul li{
+    display: inline-flex;
+    line-height: 50px;
+    margin: 0 10px 0 0;
+}
+.menu-top-left ul li a{
+    color: rgb(66, 44, 44); 
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.menu-top-left ul li ul{
+    display: none;
+    position: relative;
+}   
+.menu-top-left ul li:hover ul{
+    display: block;
+    position: absolute;
+    z-index: 100;
+    top: 40px;
+    left: 200px;
+    width: 150px;
+    height: 130px;
+    padding: 20px 0 20px 0;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    z-index: 101;
+}   
+.top-left li ul li a{
+    font-weight: 500;
+    margin-left: 5px;
+}
+.top-left li ul li a:hover{color: cadetblue;}
+.top-left li ul li{
+    display: block;
+    margin: -20px 0;
+}
+.menu-top-right{
+    width: 440px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    border-left: 1px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu-top-right p{
+    float: right;
+    line-height: 50px;
+    margin: 0 10px 0 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+}
+.menu-top-right .logout{margin: 0 100px 0 0; }
+.menu-top-right .logout a{ color: red; text-decoration: underline;}
+.menu-top-right span i
+{
+    position: relative;
+    line-height: 50px;
+    left: 10px; font-size: 19px;
+    opacity: 0.8;
+}
+.search-call{
+    position: relative;
+    height: 70px;
+    width: 100%;
+    background-color: rgb(223, 243, 240);
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+.search-call .search{
+    margin: 0 0 0 100px;
+    width: auto;
+}
+.search-call .search input{
+    width: 550px; 
+    height: 34px;
+    margin: 14px -6px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.search-call .search button{
+    height: 36px;
+    border: none;
+    width: 100px;
+    color: #fff;
+    font-weight: 600;
+    background-color: rgb(228, 140, 63);
+    cursor: pointer;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.search-call .search .select{
+    width: 205px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    height: 36px;
+    outline: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.search-call .call{
+    line-height: 70px;
+    margin: 0 100px 0 0;
+}
+.banner{
+    display: flex;
+    width: 100%;
+    height: 400px;
+    justify-content: space-between;
+}
+.content{
+    height: 400px;
+    width: 850px;
+    overflow: hidden;
+    margin: 0 0 0 100px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 100;
+}
+.content .images{
+    width: 850px;
+    height: 100%;
+}
+.images img{
+    width: 100%;
+    height: 100%;
+}
+.slides{margin: 0 0 0 100px; display: flex;
+    width: 850px; justify-content: space-between;
+}
+.btn:nth-child(1){
+    background-color: royalblue;
+    position: relative;
+    height: 30px; width: 40px;
+    border: none;
+    top: -210px; color: #fff;
+    cursor: pointer;
+    outline: none;
+    opacity: 0.5;
+}
+.btn:nth-child(2){
+    background-color: royalblue;
+    position: relative;
+    height: 30px; width: 40px;
+    border: none;
+    top: -210px; color:  #fff;
+    cursor: pointer;
+    outline: none;
+    opacity: 0.5;
+}
+.btn:hover{background-color: green; opacity: 1;}
+.news{
+    margin: 0 100px 0 0;
+    width: calc(100% - 1050px);
+    height: 400px;
+    background-color: #fff;
+    position: relative;
+    z-index: 100;
+}
+.news p{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 0;
+    font-weight: 600;
+    font-size: 18px;
+    color: green;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+.news ul{
+    height: 300px;
+    box-sizing: border-box;
+}
+.news ul li{
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+}
+.news ul li img{
+    padding: 30px 5px 0 5px;
+    float: left;
+}
+.news ul li .tieude{
+    position: absolute;
+    text-align: start;  
+    width: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    margin: 10px 0 0 5px;
+}
+.news ul li .noidung{
+   font-size: 11px;
+   text-align: start;
+   text-transform: none;
+   position: relative;
+   padding: 30px 5px 0 0px;
+   border: none;
+   color: #000;
+   opacity: 0.9;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.news ul li .noidung:hover{
+    opacity: 0.6;
+}
+.introduce{
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    background-color: #fff;
+    width: calc(100% - 200px);
+    margin: 10px auto;
+    position: relative;
+    z-index: 100;
+}
+.intro-content p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: green;
+}
+.intro-content span{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.intro-button{
+    line-height: 60px;
+    margin: 0 30px 0 0;
+   
+}
+.intro-button button{
+   padding: 8px 10px 8px 10px;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   background-color: rgb(228, 140, 63);
+   color: #fff; font-weight: 600;
+   text-transform: uppercase;
+   font-family: sans-serif;
+    border-radius: 10px;
+}
+.intro-button button:hover{background-color: sienna;}
+.product{
+    height: 200px;
+    background-color: #fff;
+    position: relative;
+    z-index: 100;
+}
+.product-title{margin: 0px 0 20px 100px;  
+}
+.product-title p{
+    font-size: 20px;
+    font-weight: 700;
+    color: green;
+    padding: 5px;
+}
+.product-content{margin: 0 90px 0 100px;}
+.product .product-content ul{
+    display: flex;
+    justify-content: space-between;
+}
+.product .product-content ul li{
+    margin: 0 10px 0 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+}
+.product .product-content ul li:hover{
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    transition: 0.5s all;
+}
+.product .product-content ul li p{
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+}
+.thucdon-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+.thucdon{
+    width: 100%;
+    height: auto;
+    background-color: snow;
+    position: relative;
+    z-index: 100;
+}
+.thucdon-content{
+    width: 500px;
+    padding: 50px 50px 20px 50px;
+}
+.thucdon-content p{
+    text-align: center;
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.thucdon-con-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    
+}
+.thucdon-button button{
+    border: none;
+    background: rgb(228, 140, 63);
+    padding: 10px 20px 10px 20px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 10px;
+    border-radius: 10px;
+}
+.thucdon-button button:hover{
+    background-color: sienna;
+    cursor: pointer;
+}
+.danhsach{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    background-color: snow;
+    position: relative;
+    z-index: 100;
+}
+.danhsach .ds-top ul{
+    display: flex;
+    width: 900px;
+    padding: 30px;
+}
+.danhsach .ds-top ul li{
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    padding: 13px;
+}
+.danhsach .ds-top ul li:hover{
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    transition: 0.5s all;
+    cursor: pointer;
+}
+.danhsach .ds-top ul li img{
+    float: left;
+    border-radius: 50%;
+    padding: 10px;
+}
+.danhsach .ds-top ul li p{
+    font-size: 17px;
+    font-weight: 600;
+}
+.danhsach .ds-top ul li a{
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+}
+.diachi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    /* background-color: rgb(142, 247, 215); */
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 100;
+    position: relative;
+}
+.diachi .ds-diachi ul{
+    display: flex;
+    width: 900px;
+    padding: 50px;
+    justify-content: center;
+}
+.diachi .ds-diachi ul li{
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    padding: 13px;
+    margin: 0 10px 0 0;
+    width: 150px;
+    height: 450px;
+    background-color: rgb(142, 247, 215);
+}
+.diachi .ds-diachi ul li:hover{
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    transition: 0.5s all;
+    cursor: pointer;
+}
+.diachi .ds-diachi ul li img{
+    border-radius: 50%;
+    padding: 10px;
+    border: groove;
+}
+.diachi .ds-diachi li p{
+   color: red;
+   font-weight: 600;
+}
+.diachi .ds-diachi ul li a{
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+}
+.diachi .ds-diachi ul li a:hover{
+    color: red;
+    font-size: 14px;
+    font-weight: 600;
+}
+.diachi .ds-diachi ul h1{
+    box-sizing: border-box;
+    border-radius: 50%;
+    color: rgb(228, 140, 63);;
+    font-size: 60px;
+}
+.diachi .ds-diachi ul h1:nth-child(3){
+    margin-top: 100px;
+}
+.diachi .ds-diachi ul h1:nth-child(7){
+    margin-top: 100px;
+}
+.diachi .ds-diachi ul li:nth-child(4){
+    margin-top: 30px;
+}
+.diachi .ds-diachi ul li:nth-child(8){
+    margin-top: 30px;
+}
+.footer{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    position: relative;
+}
+.KYJ{
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+.footer-left p{
+    color: #fff;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    top: -20px;
+}
+.footer-left{
+    margin: 0 0 0 100px;
+    padding: 100px;
+    width: auto;
+}
+.footer-left ul li{
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 10px 0;
+}
+.footer-right{
+    margin: 0 100px 0 0;
+    padding: 100px;
+}
+.footer-left ul i{float: left;
+    color: #fff; margin-right: 10px;
+}
+.footer-right ul li{
+    color: #fff;
+    margin: 10px 0;
+    font-weight: 600;
+}
+.footer-right ul li:hover{text-decoration: underline;}
+.footer-right ul li i{
+    margin-right: 5px;
+    cursor: pointer;
+}
+.dangnhap button{
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 5px 10px 5px 10px;
+    background-color: rgba(228, 140, 63);
+    border: none;
+    outline: none;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+.dangnhap button:hover{
+    cursor: pointer;
+    background-color: tomato;
+}
+.dangky button{
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 5px 10px 5px 10px;
+    margin: 0 100px 0 0;
+    background-color: rgba(228, 140, 63);
+    border: none;
+    outline: none;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+}   
+.dangky button:hover{
+    cursor: pointer;
+    background-color: tomato;
+}
